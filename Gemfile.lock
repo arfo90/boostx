@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    fakefs (0.6.7)
     metaclass (0.0.4)
     minitest (5.8.1)
     mocha (1.1.0)
@@ -14,6 +15,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fakefs
   minitest
   mocha
   rack-test
