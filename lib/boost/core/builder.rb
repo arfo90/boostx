@@ -20,6 +20,14 @@ module Boost
         new_file = File.new(path, 'w')
         new_file.close
       end
+
+      def init(project_name)
+        self.make_dir('lib')
+        # make_dir("lib/#{project_name}")
+
+        self.make_file('Gemfile')
+        self.make_file("#{project_name}", 'lib')
+      end
     end
   end
 end

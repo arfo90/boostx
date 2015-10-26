@@ -15,7 +15,16 @@ class TestCoreBuilder < TestBase
     builder = Boost::Core::Builder.new.make_file('crete_new_file')
     assert File.file?('crete_new_file.rb'), 'make_file method failed to create file'
   end
-  
+
+  def test_method_init
+    builder = Boost::Core::Builder.new.init('project_name')
+    assert File.directory?('lib'), 'init method failed to create folder'
+    # assert File.directory?('lib/project_name'), 'init method failed to create folder'
+
+    # assert File.file?('Gemfile'), 'init method failed to create file Gemfile'
+    # assert File.file?('lib/project_name.rb'), 'init method failed to create file lib/project_name.rb'
+  end
+
   def refrence
   Boost::Core::Builder.any_instance
       .expects(:make_dir)
