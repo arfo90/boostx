@@ -1,6 +1,5 @@
 require_relative '../testBase'
 require 'fakefs'
-
 class TestCoreBuilder < TestBase
   def test_class_exist
     builder = Boost::Core::Builder.new
@@ -19,10 +18,10 @@ class TestCoreBuilder < TestBase
   def test_method_init
     builder = Boost::Core::Builder.new.init('project_name')
     assert File.directory?('lib'), 'init method failed to create folder'
-    # assert File.directory?('lib/project_name'), 'init method failed to create folder'
+    assert File.directory?('lib/project_name'), 'init method failed to create folder'
 
     # assert File.file?('Gemfile'), 'init method failed to create file Gemfile'
-    # assert File.file?('lib/project_name.rb'), 'init method failed to create file lib/project_name.rb'
+    assert File.file?('lib/project_name.rb'), 'init method failed to create file lib/project_name.rb'
   end
 
   def refrence
