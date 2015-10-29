@@ -6,6 +6,7 @@ require 'bundler/setup'
 Bundler.require(:default)
 
 module Boost
+  autoload :Cli, 'boost/cli.rb'
 
   module Core
    autoload :Builder, 'boost/core/builder.rb'
