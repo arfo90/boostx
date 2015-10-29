@@ -3,9 +3,6 @@ require 'fileutils'
 module Boost
   module Core
     class Builder
-      def initialize
-      end
-
       def make_dir(folder_name)
         FileUtils::mkdir_p folder_name
       end
