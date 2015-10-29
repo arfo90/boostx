@@ -17,6 +17,8 @@ module Boost
 
         if path != Dir.pwd
           path << '/'
+        else
+          path = ''
         end
 
         path << "#{file_name}#{extension}"
@@ -26,10 +28,12 @@ module Boost
       end
 
       def init(project_name)
-        # make_file('Gemfile', Dir.pwd, '')
-        make_dir('lib')
-        make_dir("lib/#{project_name}")
+        directions = ['lib', "lib/#{project_name}"]
+        directions.each do |dir|
+          self.make_dir(dir)
+        end
         make_file("#{project_name}", 'lib')
+        make_file('Gemfile', Dir.pwd, '')
       end
     end
   end
