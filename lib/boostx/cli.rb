@@ -1,9 +1,9 @@
 require 'thor'
 
-module Boost
+module Boostx
   class Cli < Thor
     def initialize
-      @builder = Boost::Core::Builder.new
+      @builder = Boostx::Core::Builder.new
     end
 
     desc 'initializing project base', '--init'

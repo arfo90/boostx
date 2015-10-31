@@ -1,6 +1,6 @@
 require 'fileutils'
 
-module Boost
+module Boostx
   module Core
     class Builder
       def make_dir(folder_name)

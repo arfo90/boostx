@@ -1,4 +1,4 @@
-require_relative '../lib/boost'
+require_relative '../lib/boostx'
 
 Bundler.require(:test)
 
