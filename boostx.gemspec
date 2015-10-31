@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["arfo.amireza@gmail.com"]
   spec.summary       = "Boostx is ruby project template generator."
   spec.description   = "Boostx ables users to create their desire template and it generat new projects based on template"
-  spec.homepage      = "https://github.com/arfo90/boost"
+  spec.homepage      = "https://github.com/arfo90/boostx"
   spec.license       = "MIT"
 
   spec.files         = Dir['README.md', 'lib/**/*']
