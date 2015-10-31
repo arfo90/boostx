@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "boostx"
-  spec.version       = "0.0.1" #Boostx::VERSION
+  spec.version       = "0.0.2" #Boostx::VERSION
   spec.authors       = ["Amireza Fatemi"]
   spec.email         = ["arfo.amireza@gmail.com"]
   spec.summary       = "Boostx is ruby project template generator."
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = []
   spec.require_paths = ["lib"]
 
-  spec.add_dependency('thor', '> 0.19.1')
+  spec.add_dependency('thor', '> 0.19.0')
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
