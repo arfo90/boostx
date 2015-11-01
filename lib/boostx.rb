@@ -16,3 +16,7 @@ module Boostx
     autoload :Version, 'boostx/version.rb'
   end
 end
+
+# for debuging and testing locally
+# can exec command ./boostx init pro_name
+# Boostx::Cli.start(ARGV)

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/arfo90/boost.svg?branch=master)](https://travis-ci.org/arfo90/boost)
+[![Build Status](https://travis-ci.org/arfo90/boost.svg?branch=master)](https://travis-ci.org/arfo90/boostx)
 
 # Boost
 
