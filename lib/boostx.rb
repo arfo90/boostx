@@ -11,4 +11,8 @@ module Boostx
   module Core
    autoload :Builder, 'boostx/core/builder.rb'
   end
+
+  module Version
+    autoload :Version, 'boostx/version.rb'
+  end
 end

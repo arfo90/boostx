@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "boostx"
-  spec.version       = "0.0.2" #Boostx::VERSION
+  spec.version       = Boostx::Version::STRING
   spec.authors       = ["Amireza Fatemi"]
   spec.email         = ["arfo.amireza@gmail.com"]
   spec.summary       = "Boostx is ruby project template generator."
