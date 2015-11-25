@@ -17,12 +17,38 @@ class TestCoreBuilder < TestBase
   end
 
   def test_method_init
+    YAML::Store.any_instance
+      .stubs(:transaction)
+
     builder = Boostx::Core::Builder.new.init('project_name')
     assert File.directory?('lib'), 'init method failed to create folder'
     assert File.directory?('lib/project_name'), 'init method failed to create folder'
 
     # assert File.file?('Gemfile'), 'init method failed to create file Gemfile'
     assert File.file?('lib/project_name.rb'), 'init method failed to create file lib/project_name.rb'
+  end
+
+  def test_method_init_create_calls_yaml_store
+    yaml_service = mock
+    YAML::Store
+      .expects(:new)
+      .returns(yaml_service)
+
+    yaml_service.stubs(:transaction)  
+        
+    builder = Boostx::Core::Builder.new.init('project_name')
+  end
+   
+  def test_method_init_create_calls_yaml_store_calls_transaction
+    yaml_creator = mock
+    YAML::Store
+      .stubs(:new)
+      .returns(yaml_creator)
+
+    yaml_creator.expects(:transaction)
+      .once
+
+    builder = Boostx::Core::Builder.new.init('project_name')
   end
 
   def refrence

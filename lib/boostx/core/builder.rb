@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'yaml/store'
 
 module Boostx
   module Core
@@ -31,6 +32,17 @@ module Boostx
         end
         make_file("#{project_name}", 'lib')
         make_file('Gemfile', Dir.pwd, '')
+
+        create_yaml
+      end
+
+      private
+
+      def create_yaml
+       yaml_file = YAML::Store.new '.boostx'
+       yaml_file.transaction do
+         yaml_file['project_name'] = 'project_name'
+       end
       end
     end
   end
