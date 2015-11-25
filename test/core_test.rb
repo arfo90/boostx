@@ -1,4 +1,5 @@
-require_relative '../testBase'
+require_relative 'testBase'
+
 require 'fakefs'
 class TestCoreBuilder < TestBase
   def test_class_exist
@@ -30,4 +31,7 @@ class TestCoreBuilder < TestBase
       .once
   end
 
+end
+
+class TestTemplate < TestBase
 end
