@@ -32,16 +32,19 @@ module Boostx
         end
         make_file("#{project_name}", 'lib')
         make_file('Gemfile', Dir.pwd, '')
+        
 
-        create_yaml
+        create_yaml(project_name)
       end
 
       private
 
-      def create_yaml
+      def create_yaml(project_name = nil)
        yaml_file = YAML::Store.new '.boostx'
        yaml_file.transaction do
-         yaml_file['project_name'] = 'project_name'
+         yaml_file['project_name'] = project_name
+         yaml_file['module_name'] = project_name
+         yaml_file['module_dir'] = "#{Dir.pwd}/lib/#{project_name}"
        end
       end
     end
