@@ -2,7 +2,7 @@
 
 module Boostx
   module Version
-    STRING = '0.0.2'
+    STRING = '0.0.5'
 
     MSG = '%s (using Parser %s, running on %s %s %s)'
 

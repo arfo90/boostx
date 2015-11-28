@@ -1,3 +1,8 @@
+begin
+  require 'psych'
+  rescue ::LoadError
+end
+
 require 'fileutils'
 require 'yaml/store'
 
