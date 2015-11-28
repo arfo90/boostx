@@ -10,6 +10,7 @@ module Boostx
 
   module Core
    autoload :Builder, 'boostx/core/builder.rb'
+   autoload :Template, 'boostx/core/template.rb'
   end
 
   module Version

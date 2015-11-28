@@ -59,5 +59,16 @@ class TestCoreBuilder < TestBase
 
 end
 
+######### Template test ########
 class TestTemplate < TestBase
+  def test_tempalte_class_exists
+    template = Boostx::Core::Template.new
+  end
+  
+  def test_basic_module_struc_retuns_basic_module_generated_code
+    expected_generated_code = "$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))\nrequire 'rubygems'\n"
+    expected_generated_code << "require 'bundler/setup'\nBundler.require(:default)\n\nmodule Sample\n\s## autoload classes here\nend"
+    actual_code = Boostx::Core::Template.base_module_struc('Sample')
+    assert expected_generated_code.to_s == actual_code.to_s, 'Generated basic module is not correct' 
+  end
 end
