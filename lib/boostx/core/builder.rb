@@ -13,7 +13,7 @@ module Boostx
         FileUtils::mkdir_p folder_name
       end
 
-      def make_file(file_name, path = Dir.pwd, extension = '.rb')
+      def make_file(file_name, path = Dir.pwd, extension = '.rb', content = nil)
         unless File.directory?(path)
           self.make_dir(path)
         end
@@ -27,6 +27,7 @@ module Boostx
         path << "#{file_name}#{extension}"
 
         new_file = File.new(path, 'w')
+        new_file.write(content) unless content.nil?
         new_file.close
       end
 
@@ -35,14 +36,19 @@ module Boostx
         directions.each do |dir|
           self.make_dir(dir)
         end
-        make_file("#{project_name}", 'lib')
         make_file('Gemfile', Dir.pwd, '')
         
 
         create_yaml(project_name)
+        create_module(project_name)
       end
 
       private
+
+      def create_module(project_name)
+        module_content = Boostx::Core::Template.base_module_struc(project_name.capitalize)
+        make_file("#{project_name}", 'lib', '.rb', module_content.to_s)
+      end
 
       def create_yaml(project_name = nil)
        yaml_file = YAML::Store.new '.boostx'
