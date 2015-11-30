@@ -3,6 +3,6 @@
 
 $LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + '/../lib')
 
-require 'boostx'
+require 'boostx/cli'
 
 Boostx::Cli.start(ARGV)

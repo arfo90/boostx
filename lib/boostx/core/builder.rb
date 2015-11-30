@@ -5,6 +5,7 @@ end
 
 require 'fileutils'
 require 'yaml/store'
+require_relative 'template'
 
 module Boostx
   module Core

@@ -1,4 +1,5 @@
 require 'thor'
+require_relative 'core/builder'
 
 module Boostx
   class Cli < Thor

@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-#require 'boostx/version'
+require 'boostx/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "boostx"
@@ -14,8 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = Dir['README.md', 'lib/**/*']
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = []
+  spec.executables   = %w(boostx)
   spec.require_paths = ["lib"]
 
   spec.add_dependency('thor', '> 0.19.0')
