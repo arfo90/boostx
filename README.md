@@ -7,4 +7,10 @@ Boost is code generator for ruby project based on required template
   - It helps to create basic files and folders (module, lib, etc)
   - Creating Rake test automatically 
 
+# Command
+
+```sh
+$ gem install boostx
+boostx init project_name
+```
 Still in progress for first iteration, in case you are interested to contribute you can check [PLAN.md](https://github.com/arfo90/boost/blob/master/PLAN.md) 
