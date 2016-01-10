@@ -13,4 +13,14 @@ Boost is code generator for ruby project based on required template
 $ gem install boostx
 boostx init project_name
 ```
+
+
+```sh
+then you will have
+--project_name
+  -lib
+	-project_name
+	-project_name.rb
+  -Gemfile
+```
 Still in progress for first iteration, in case you are interested to contribute you can check [PLAN.md](https://github.com/arfo90/boost/blob/master/PLAN.md) 
