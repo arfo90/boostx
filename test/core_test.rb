@@ -51,6 +51,10 @@ class TestCoreBuilder < TestBase
     builder = Boostx::Core::Builder.new.init('project_name')
   end
 
+  def test_method_rbfile_exists
+    builder = Boostx::Core::Builder.new.rb_file('new_file')
+  end
+
   def refrence
   Boostx::Core::Builder.any_instance
       .expects(:make_dir)

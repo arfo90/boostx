@@ -8,5 +8,11 @@ module Boostx
       builder = Boostx::Core::Builder.new
       builder.init(project_name)
     end
+
+	desc 'Create new rb file', 'rbfile'
+    def rbfile(file_name)
+      builder = Boostx::Core::Builder.new
+      builder.rb_file(file_name)
+    end
   end
 end
