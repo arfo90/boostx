@@ -6,7 +6,7 @@
   - Creating folders
   - Generating files (.rb)
   - Adding sub modules and files.rb to module.rb
-  - Interating with CLI
+  - Hook features with CLI
 
 ### Iteration 2
 
