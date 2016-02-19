@@ -44,8 +44,9 @@ module Boostx
         create_module(project_name)
       end
 
-	  def rb_file(file_name)
-	  end
+      def rb_file(file_name)
+				self.make_file(file_name)
+      end
 
       private
 
