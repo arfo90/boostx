@@ -2,4 +2,6 @@
 *.gem
 log/
 tmp/
+hack/
+*.sw*
 
