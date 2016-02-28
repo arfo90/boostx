@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/arfo90/boostx.svg?branch=master)](https://travis-ci.org/arfo90/boostx)
 
-# Boost
+# Boostx
 
 Boost is code generator for ruby project based on required template
 
@@ -16,7 +16,6 @@ boostx init project_name
 
 
 ```sh
-then you will have
 --project_name
   -lib
 	-project_name
