@@ -4,4 +4,9 @@ log/
 tmp/
 hack/
 *.sw*
+bin/
+!bin/boostx
 
+.build
+.bundle/
+vendor/
