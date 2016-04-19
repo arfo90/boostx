@@ -6,6 +6,7 @@ hack/
 *.sw*
 bin/
 !bin/boostx
+/gem_test
 
 .build
 .bundle/

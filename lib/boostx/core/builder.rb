@@ -38,13 +38,14 @@ module Boostx
           self.make_dir(dir)
         end
         make_file('Gemfile', Dir.pwd, '')
-        
+
 
         create_yaml(project_name)
         create_module(project_name)
       end
 
       def rb_file(file_name)
+        file_content = Boostx::Core::Template.base_file_struc(file_name.capitalize)
 				self.make_file(file_name)
       end
 

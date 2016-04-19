@@ -13,6 +13,15 @@ module Boostx
        basic_module
      end
 
+     def self.base_file_struc(file_name)
+       p file_name
+       basic_file = String.new
+       basic_file << "module #{file_name}\n"
+       basic_file << "\s## autoload classes here\nend\nend"
+       basic_file
+       p basic_file
+     end
+
      def self.module_require
        pre_module_require = []
        pre_module_require << "$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))"

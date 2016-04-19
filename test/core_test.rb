@@ -34,11 +34,11 @@ class TestCoreBuilder < TestBase
       .expects(:new)
       .returns(yaml_service)
 
-    yaml_service.stubs(:transaction)  
-        
+    yaml_service.stubs(:transaction)
+
     builder = Boostx::Core::Builder.new.init('project_name')
   end
-   
+
   def test_method_init_create_calls_yaml_store_calls_transaction
     yaml_creator = mock
     YAML::Store
@@ -73,11 +73,17 @@ class TestTemplate < TestBase
   def test_tempalte_class_exists
     template = Boostx::Core::Template.new
   end
-  
+
   def test_basic_module_struc_retuns_basic_module_generated_code
     expected_generated_code = "$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))\nrequire 'rubygems'\n"
     expected_generated_code << "require 'bundler/setup'\nBundler.require(:default)\n\nmodule Sample\n\s## autoload classes here\nend"
     actual_code = Boostx::Core::Template.base_module_struc('Sample')
-    assert expected_generated_code.to_s == actual_code.to_s, 'Generated basic module is not correct' 
+    assert expected_generated_code.to_s == actual_code.to_s, 'Generated basic module is not correct'
   end
+
+  # def test_basic_file_struc_retuns_basic_file_generated_code
+  #   expected_generated_code << "module New_file\n\s\n\sclass New_file## autoload classes here\nend\nend"
+  #   actual_code = Boostx::Core::Template.base_file_struc('New_file')
+  #   assert expected_generated_code.to_s == actual_code.to_s, 'Generated basic class file is not correct'
+  # end
 end
