@@ -2,7 +2,7 @@
 
 # Boostx
 
-Boost is code generator for ruby project based on required template
+Boostx is code generator for ruby project based on required template
 
   - It helps to create basic files and folders (module, lib, etc)
   - Creating Rake test automatically 
