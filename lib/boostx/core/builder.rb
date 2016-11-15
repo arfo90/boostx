@@ -46,7 +46,7 @@ module Boostx
 
       def rb_file(file_name)
         file_content = Boostx::Core::Template.base_file_struc(file_name.capitalize)
-				self.make_file(file_name)
+	self.make_file(file_name)
       end
 
       private
