@@ -11,7 +11,7 @@ Boostx is code generator for ruby project based on required template
 
 ```sh
 $ gem install boostx
-$ boostx init project_name
+$ boostx init <project_name>
 ```
 
 
